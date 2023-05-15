@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+//        resolutionStrategy {
+//            eachPlugin {
+//                if( requested.id.id == 'dagger.hilt.android.plugin') {
+//                    useModule("com.google.dagger:hilt-android-gradle-plugin:2.39.1")
+//                }
+//            }
+//        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
+    }
+}
+rootProject.name = "MVVMHiltCleanArchitecture"
+include ':app'

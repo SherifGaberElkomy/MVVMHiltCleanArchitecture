@@ -1,4 +1,4 @@
-package com.example.mvvmhiltcleanarchitecture.di
+package com.example.mvvmhiltcleanarchitecture.features.album.di
 
 import com.example.mvvmhiltcleanarchitecture.data.remote.RetrofitService
 import com.example.mvvmhiltcleanarchitecture.features.album.data.repository.AlbumRepositoryImpl
@@ -11,7 +11,7 @@ import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)
 @Module
-class RepositoryModule {
+class AlbumRepositoryModule {
     @Singleton
     @Provides
     fun provideAlbumRepository(

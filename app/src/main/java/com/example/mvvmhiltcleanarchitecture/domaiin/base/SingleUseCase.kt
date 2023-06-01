@@ -12,7 +12,7 @@ abstract class SingleUseCase<T> : UseCase() {
         onError: ((t: Throwable) -> Unit),
         onFinished: () -> Unit = {}
     ) {
-     //   disposeLast()
+        disposeLast()
         lastDisposable = buildUseCaseSingle()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
